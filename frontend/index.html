@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Multisnake</title>
+
+    <style>
+      #gameScreen {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="gameSection">
+      <div id="menuScreen" class="menuScreen">
+        <div class="container">
+          <h1>Multisnake!</h1>
+          <button id="newGameButton" class="newGameButton">
+            Create New Game
+          </button>
+          <p class="or">or</p>
+          <div class="formGroup">
+            <input
+              type="text"
+              placeholder="Enter Game Code"
+              id="gameCodeInput"
+            />
+            <button id="joinGameButton" class="joinGameButton" type="submit">
+              Join Game
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="gameScreen" class="gameScreen">
+        <div class="container">
+          <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="index.js"></script>
+</html>
